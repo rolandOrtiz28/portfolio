@@ -41,7 +41,7 @@ router.get('/products/:id', catchAsync(async (req, res, next) => {
         const product = await Product.findById(req.params.id);
         if (!product) {
             req.flash('error', "We cannot find that product")
-            res.redirect('/products')
+            return res.redirect('/products')
         }
         res.render('products/show', { product })
 
@@ -51,31 +51,41 @@ router.get('/products/:id', catchAsync(async (req, res, next) => {
 }))
 //update product
 router.get('/products/:id/edit', async (req, res) => {
-    const { id } = req.params
-    const product = await Product.findById(id)
-    if (!product) {
-        req.flash('error', "We cannot find that product")
+    try {
+        const { id } = req.params
+        const product = await Product.findById(id)
+        if (!product) {
+            req.flash('error', "We cannot find that product")
+            return res.redirect('/products')
+        }
+        res.render('products/edit', { product })
+    } catch (err) {
+        console.log(err.message);
         res.redirect('/products')
     }
-    res.render('products/edit', { product })
 })
 
 //show
-router.put('/products/:id', catchAsync(async (req, res, next) => {
+router.put('/products/:id', catchAsync(async (req, res) => {
     const { id } = req.params;
     const product = await Product.findByIdAndUpdate(id, { ...req.body.product });
     await product.save();
     req.flash('success', 'Product updated')
     res.redirect(`/products`)
-    next
+
 }))
 
 
 //delete product
 router.delete('/:id', catchAsync(async (req, res) => {
-    const { id } = req.params;
-    await Product.findByIdAndDelete(id);
-    res.redirect('/products');
+    try {
+        const { id } = req.params;
+        await Product.findByIdAndDelete(id);
+        return res.redirect('/products');
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/products')
+    }
 }))
 
 
