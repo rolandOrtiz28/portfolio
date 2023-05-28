@@ -103,7 +103,7 @@ gsap.fromTo(
 
 
 gsap.to(".att1", {
-    opacity: .1,
+    opacity: .4,
     duration: 1,
     delay: 0,
     scrollTrigger: {
@@ -115,7 +115,7 @@ gsap.to(".att1", {
 });
 
 gsap.to(".att2", {
-    opacity: .1,
+    opacity: .3,
     duration: 2,
     delay: 1,
     scrollTrigger: {
@@ -126,7 +126,7 @@ gsap.to(".att2", {
     },
 });
 gsap.to(".att3", {
-    opacity: .1,
+    opacity: .3,
     duration: 3,
     delay: 2,
     scrollTrigger: {
@@ -137,7 +137,7 @@ gsap.to(".att3", {
     },
 });
 gsap.to(".att4", {
-    opacity: .1,
+    opacity: .3,
     duration: 4,
     delay: 3,
     scrollTrigger: {
@@ -148,7 +148,7 @@ gsap.to(".att4", {
     },
 });
 gsap.to(".att5", {
-    opacity: .1,
+    opacity: .3,
     duration: 5,
     delay: 4,
     scrollTrigger: {

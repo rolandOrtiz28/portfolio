@@ -205,6 +205,7 @@
 
 @media screen and (max-width: 760px) {
 
+
     .container-fluid .image {
         position: absolute;
         top: 30px;
@@ -232,24 +233,38 @@
 
     }
 
+    .details {
+        width: 100% !important;
+
+    }
+
     .details h1 {
         font-size: 30px;
-        margin-top: 5rem;
+        margin-top: 7rem;
     }
 
     .details h2 {
-        font-size: 20px;
+        width: 100%;
+        font-weight: 400;
+        font-size: 16px;
     }
 
     .work h2 span::after {
         width: 20rem;
-        height: 30px;
-        left: 160px;
+        height: 20px;
+        left: 140px;
+        animation: typing 2s steps(25) infinite;
+        animation-delay: 1s;
     }
 
     .details p {
-        font-size: 13px;
-        margin-right: 10rem;
+        font-size: 12px;
+
+    }
+
+    .details .description {
+        width: 100%;
+
     }
 
     .imgBx i {
@@ -276,11 +291,7 @@
     }
 
 
-    .work h2 span::after {
 
-        animation: typing 2s steps(25) infinite;
-        animation-delay: 2s;
-    }
 
     @keyframes typing {
         0% {
@@ -290,7 +301,7 @@
         100% {
             border-left: 3px solid black;
             left: 44%;
-            margin: 0 -35px 0 -100px;
+            margin: 0 -35px 0 35px;
         }
 
     }
@@ -472,7 +483,8 @@
 
 @media screen and (max-width: 760px) {
     #about {
-        width: 500px;
+        width: 480px;
+
         /* display: flex;
         position: relative;
         align-items: center;
@@ -489,14 +501,20 @@
 
     .about-me .text {
         width: 400px;
-
         display: flex;
-        justify-content: center;
+        justify-content: start;
         align-items: center;
         flex-direction: column;
+        margin-right: 6rem;
         /* margin: 18rem 7rem 0 0; */
 
     }
+
+    .self {
+
+        display: none;
+    }
+
 
 
     .glow::before,
@@ -517,16 +535,19 @@
 
 /* Projects */
 .portfolio {
+
     width: 100%;
     height: 100vh;
     flex: 1 1 1;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 3 rem 2rem 4rem;
+    /* padding: 3 rem 2rem 4rem; */
     align-items: center;
     z-index: 10;
 }
+
+
 
 .project {
     margin-left: 2rem;
@@ -538,7 +559,7 @@
     font-size: 40px;
     text-align: center;
     width: 100%;
-    padding-top: 2rem;
+    /* padding-top: 2rem; */
 }
 
 .project-container {
@@ -547,7 +568,7 @@
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    margin-top: 10rem;
+    /* margin-top: 10rem; */
 }
 
 .project-box {
@@ -564,7 +585,7 @@
 
 .project-box .project-layer {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -590,7 +611,7 @@
 }
 
 .project-layer h4 {
-    padding-top: 1rem;
+    /* padding-top: 1rem; */
     font-size: 20px;
     color: rgb(0, 0, 0);
 }
@@ -882,7 +903,10 @@
 
 @media screen and (max-width: 760px) {
     .portfolio {
-        width: 500px;
+        width: 480px;
+        height: 1200px;
+        position: absolute;
+        top: 680px;
     }
 
     .project-container {
@@ -890,17 +914,19 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
+        margin-right: 10rem;
     }
 
     .project .project-box {
-        width: 300px;
+        width: 250px;
 
     }
 
-    #pills-home h2 {
-        font-size: 30px;
 
+
+    #pills-home h2 {
+        font-size: 17px;
+        padding-right: 8rem;
     }
 
     .wrapper {
@@ -908,6 +934,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        padding-left: 3rem;
     }
 
 }
