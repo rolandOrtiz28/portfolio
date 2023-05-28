@@ -19,7 +19,7 @@ const errorHandlingRoute = require('./routes/errorhandling')
 const productRoute = require('./routes/products')
 
 //URL
-const dbUrl = process.env.DB_URL2 || 'mongodb://127.0.0.1:27017/rolandortiz'
+const dbUrl = process.env.DB_URL || 'mongodb://127.0.0.1:27017/rolandortiz'
 
 
 // mongoose conncection
