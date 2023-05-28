@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roland Ortiz</title>
+    <link rel="stylesheet" href="stylesheet/homepage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/00e4d50ddc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+</head>
+
+<body>
+    <%- include('./partials/flash') %>
+        <section class="">
+
+            <div class="container-fluid homepage">
+                <div class="row">
+                    <div class="details w-50 col-6 ms-5">
+                        <div>
+                            <h1 class="name">Roland P. Ortiz</h1>
+                        </div>
+                        <div class="work">
+                            <h2> <span class="full-stack"> Full-Stack </span><span class="type"> Web Developer</span>
+                            </h2>
+                        </div>
+                        <div class="description mt-3">
+                            <p>I'm a passionate full-stack web developer who has recently completed a web development
+                                course. With a strong foundation in both front-end and back-end development, I'm excited
+                                to
+                                take on new challenges and build dynamic, user-friendly websites. I am proficient in
+                                HTML,
+                                CSS,
+                                JavaScript, and various frameworks such as React and Node.js. I am a quick learner, a
+                                team
+                                player, and eager to contribute my skills to the world of web development.</p>
+                        </div>
+                        <div class="resume">
+
+                        </div>
+                        <button class="btn1 mt-5"><a class="text-white" href="images/Roland-Ortiz-CV.pdf">DOWNLOAD
+                                CV</a></button>
+                    </div>
+
+                </div>
+                <div class="image">
+                    <img src="images/bg.png" alt="">
+                    <div class="social-links">
+                        <div class="imgBx active">
+                            <a href="https://web.facebook.com/rolandortizjr/"> <i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                        <div class="imgBx">
+                            <a href="https://github.com/rolandOrtiz28"><i class="fa-brands fa-github"></i></a>
+                        </div>
+                        <div class="imgBx">
+                            <a href="https://www.linkedin.com/in/roland-ortiz-500772253/"><i
+                                    class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about mt-2 mb-3">
+
+            <div class="about-title">
+                <h1 class="h1">ABOUT ME</h1>
+            </div>
+            <div class="container-fluid">
+
+                <div class="row about-me d-flex justify-content-between align-items-center">
+
+                    <div class="about-image2  glow col-6">
+                        <img class="image2" src="images/office.jpg" class="card-img" alt="">
+                    </div>
+                    <div id="text" class="text col-6 ms-auto">
+                        <p class="paragraph me-5">
+                            I am a passionate and ambitious web developer with a strong desire to achieve financial
+                            success.
+                            With a focus on web development, I possesses the skills and knowledge necessary to create
+                            engaging and functional websites that meet the needs of clients and end-users.
+                            I am dedicated to my craft and continually strives to enhance my expertise in web
+                            development by staying updated with the latest industry trends, technologies, and
+                            programming
+                            languages. I have a solid understanding of front-end development, including HTML, CSS, and
+                            JavaScript, and specializes in utilizing modern back-end technologies such as Node.js,
+                            MongoDB,
+                            and Express.I am skilled in leveraging the popular front-end frameworks React and EJS.
+                        </p>
+
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModalEmail"
+                            data-bs-whatever="@getbootstrap" class="email-btn text-center"><span> Send me an
+                                Email</span></button>
+                    </div>
+                </div>
+                <div class="self">
+                    <span class="attitude att1">Innovator!</span>
+                    <span class="attitude att2">Leader!</span>
+                    <span class="attitude att3">Nurturer!</span>
+                    <span class="attitude att4">Adventurer!</span>
+                    <span class="attitude att5">Analyzer!</span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+        <section class="portfolio" id="portfolio">
+
+
+            <ul class="nav nav-pills ms-3 mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active btn4" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">PROJECTS</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link btn4" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">What I know</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <h2 class="gdh1">LATEST WEB DEVELOPMENT PROJECTS
+                    </h2>
+                    <div class="project-container">
+
+                        <div class="project">
+                            <div class="project-box">
+                                <img src="images/1.png" alt="">
+                                <div class="project-layer">
+                                    <h4>TREKKER TRAKKER TOURIST SPOT GUIDE</h4>
+                                    <span class="project-text">
+                                        <p>Trekker Trakker is a robust application offering user authentication and
+                                            authorization to
+                                            ensure
+                                            secure access. It also integrates maps for location-based services and
+                                            provides
+                                            validations
+                                            and
+                                            error handling to maintain data accuracy and reliability. With full CRUD
+                                            functionality,
+                                            users
+                                            can easily create, read, update, and delete data entities within the
+                                            application.</p>
+                                    </span>
+                                    <a href="#"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                            <button class="btn3 mt-3"><a href="https://rolandortiz-project.onrender.com">Live
+                                    Demo</a></button>
+                            <button class="btn3 mt-3"><a href="https://github.com/rolandOrtiz28/rolandortiz">Source
+                                    Code</a></button>
+                        </div>
+                        <div class="project">
+                            <div class="project-box">
+                                <img src="images/2.png" alt="">
+                                <div class="project-layer">
+                                    <h4>PAULA MEDICAL WEBSITE</h4>
+                                    <span class="project-text">
+                                        <p>Paula Medical Website is an engaging online platform that serves as the
+                                            official
+                                            website for a prominent company in the medical industry. The website offers
+                                            a
+                                            comprehensive range of features, including user authentication, allowing
+                                            visitors to create personalized accounts to access exclusive content and
+                                            features.Users can explore an extensive catalog of
+                                            medical devices, equipment, and supplies, gaining valuable insights into the
+                                            innovative solutions provided by the company.</p>
+                                    </span>
+                                    <a href="#"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                            <button class="btn3 mt-3"><a href="https://pmstweb.cyclic.app/">Live Demo</a></button>
+                            <button class="btn3 mt-3"><a href="https://github.com/rolandOrtiz28/PMSTweb">Source
+                                    Code</a></button>
+                        </div>
+                        <div class="project">
+                            <div class="project-box">
+                                <img src="images/3.png" alt="">
+                                <div class="project-layer">
+                                    <h4>SHADOWIES COFFEE SHOP</h4>
+                                    <span class="project-text">
+                                        <p>Shadowies Coffee Shop Website is an inviting online platform that serves as
+                                            the
+                                            virtual hub for a charming coffee shop. With its seamless user experience
+                                            and
+                                            range of features, the website offers a delightful way for coffee
+                                            enthusiasts to
+                                            engage with the brand.Upon visiting the website, users are greeted with a
+                                            user
+                                            authentication system, allowing them to create personalized accounts. The
+                                            heart
+                                            of the website lies in its comprehensive products menu, showcasing an
+                                            enticing
+                                            selection of freshly brewed coffee, specialty beverages, delectable
+                                            pastries,
+                                            and savory treats.</p>
+                                    </span>
+                                    <a href="#"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                            <button class="btn3 mt-3"><a href="">Live Demo</a></button>
+                            <button class="btn3 mt-3"><a href="">Source Code</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    id="know">
+
+                    <div class="skills-container">
+                        <div class="wrapper">
+                            <div class="card">
+                                <h3>Error Handling</h3>
+                                <p>Error handling refers to the process of identifying, capturing, and managing errors
+                                    that
+                                    occur during the execution of a program. In the context of Node.js and Express,
+                                    error
+                                    handling involves implementing mechanisms to catch and handle errors that may arise
+                                    during the handling of HTTP requests and responses. This can include logging errors,
+                                    returning appropriate error responses, and gracefully handling exceptions to prevent
+                                    application crashes.</p>
+                                <span class="error material-symbols-outlined">
+                                    error
+                                </span>
+                                <button class="btn5"><a href="/register"> TRY HERE</a></button>
+                            </div>
+                            <div class="card">
+                                <h3>Validation</h3>
+                                <p>Validation involves ensuring that user input or data meets certain criteria or
+                                    constraints. In the context of Node.js and Express, validation typically refers to
+                                    validating the data submitted in HTTP requests to ensure it adheres to specified
+                                    rules.
+                                    This can include validating form inputs, query parameters, or request bodies to
+                                    ensure
+                                    they are of the expected format, contain required fields, and meet any other defined
+                                    validation rules. </p>
+                                <span class="validation material-symbols-outlined">
+                                    verified_user
+                                </span>
+                                <button class="btn5" type="button" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModalValid" data-bs-whatever="@getbootstrap">TRY
+                                    HERE</button>
+                            </div>
+                            <div class="card">
+                                <h3>Authentication</h3>
+                                <p>Authentication is the process of verifying the identity of a user or entity. In the
+                                    context of Node.js and Express, authentication typically involves validating user
+                                    credentials, such as usernames and passwords, to grant access to protected resources
+                                    or
+                                    functionalities. This can be done using various authentication mechanisms, such as
+                                    session-based authentication, token-based authentication (e.g., JSON Web Tokens), or
+                                    integration with external identity providers (e.g., OAuth).</p>
+                                <span class="auth material-symbols-outlined">
+                                    person
+                                </span>
+                                <button class="btn5"><a href="/login">TRY HERE</a></button>
+                            </div>
+                            <div class="card">
+                                <h3>CRUD</h3>
+                                <p>CRUD is an acronym that stands for Create, Read, Update, and Delete. It represents
+                                    the
+                                    basic operations performed on data in a persistent storage system, such as a
+                                    database.
+                                    In the context of Node.js and Express, implementing CRUD functionality involves
+                                    defining
+                                    routes and handlers for creating, reading, updating, and deleting data resources.
+                                    This
+                                    typically includes mapping HTTP methods (POST, GET, PUT, DELETE) to corresponding
+                                    CRUD
+                                    operations on the underlying data storage.</p>
+                                <span class="form material-symbols-outlined">
+                                    list_alt
+                                </span>
+                                <button class="btn5"><a href="/products">TRY HERE</a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+        <div class="modal fade" id="exampleModalEmail" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/send" method="POST">
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                <input type="text" class="form-control" id="recipient-name" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Email:</label>
+                                <input type="email" class="form-control" id="recipient-name" name="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Subject:</label>
+                                <input type="text" class="form-control" id="recipient-name" name="subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text" name="message"></textarea>
+                            </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn3" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn3 w-50">Send message</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- VALIDATION -->
+        <div class="modal fade" id="exampleModalValid" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header p-4 row">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="exampleModalLabel" style="color: rgb(10, 6, 255);">Validation</h5>
+                        <ul>
+                            <li class="ms-2 p-2"><small class="text-muted">Please Submit the form without putting any
+                                    Value</small></li>
+                        </ul>
+
+                    </div>
+                    <div class="modal-body">
+                        <form action="/register" method="POST" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="username" class="col-form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please choose a username.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please choose an email.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="col-form-label">Password</label>
+                                <input type="text" class="form-control" id="password" name="password" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please choose a password.
+                                </div>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn3" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" class="btn3 w-50">Register</button>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+
+            (function () {
+                'use strict'
+
+
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+
+        </script>
+
+
+        <script src="javascript/homepage.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

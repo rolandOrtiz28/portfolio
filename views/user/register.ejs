@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        .validicon {
+            font-size: 11px;
+            margin-top: 10px;
+        }
+
+        .check-leng,
+        .check-big-letter,
+        .check-num,
+        .check-special-char {
+
+            display: none;
+
+        }
+
+        .cross-leng,
+        .cross-big-letter,
+        .cross-num,
+        .cross-special-char {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="vh-100 bg-image">
+
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body p-5">
+                                <%- include('../partials/flash') %>
+                                    <h5 class="modal-title" id="exampleModalLabel" style="color: crimson;">Error
+                                        Handling & Validations</h5>
+                                    <ul>
+                                        Possible Errors Here are:
+                                        <li class="ms-2 p-2"><small class="text-muted">Duplication(Try to Register with
+                                                a username:
+                                                rolandortiz)</small></li>
+                                        <li class="ms-2 p-2"> <small class="text-muted">Model Requiremenst(Example is
+                                                Number.If you put as string it will throw an error)</small></li>
+                                        <li class="ms-2 p-2"> <small class="text-muted">Password Requiremenst(Try not to
+                                                follow the requirements)</small></li>
+                                    </ul>
+                                    <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+                                    <form action="/register" method="POST" class="needs-validation" novalidate>
+
+                                        <div class="form-outline mb-2">
+                                            <input type="text" name="username" id="form3Example1cg"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="form3Example1cg">Your Username</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Username.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <input type="email" name="email" id="form3Example3cg"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="form3Example3cg">Your Email</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Email.
+                                            </div>
+                                        </div>
+                                        <div class="form-outline mb-2">
+                                            <input type="text" name="number" id="form3Example4cdg"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="form3Example4cdg">Your Phone Numer</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Phone Number.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <input type="password" name="password" id="password"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="password">Password</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Password.
+                                            </div>
+                                            <div class="validicon w-100">
+                                                <div class="">
+                                                    <div class="alert px-2 py-2 mb-0 d-none" role="alert"
+                                                        data-mdb-color="warning" id="password-alert">
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li class="requirements leng">
+                                                                <i class="fas fa-check text-success me-2 check-leng"
+                                                                    style="display:none"></i>
+                                                                <i class="fas fa-times text-danger me-3 cross-leng"></i>
+                                                                Your password must have at least 8 chars
+                                                            </li>
+                                                            <li class="requirements big-letter">
+                                                                <i class="fas fa-check text-success me-2 check-big-letter"
+                                                                    style="display:none"></i>
+                                                                <i
+                                                                    class="fas fa-times text-danger me-3 cross-big-letter"></i>
+                                                                Your password must have at least 1 big letter.
+                                                            </li>
+                                                            <li class="requirements num">
+                                                                <i class="fas fa-check text-success me-2 check-num"
+                                                                    style="display:none"></i>
+                                                                <i class="fas fa-times text-danger me-3 cross-num"></i>
+                                                                Your password must have at least 1 number.
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-dark ">Register</button>
+                                    </form>
+
+                            </div>
+                            <button class="btn w-25 ms-auto btn-outline-dark mb-5" id="back-button"><a href="/"
+                                    style="text-decoration: none;color: black;">BACK</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        const passwordInput = document.getElementById("password");
+        const passwordAlert = document.getElementById("password-alert");
+        const checkLeng = document.querySelector(".leng i.fas.fa-check");
+        const crossLeng = document.querySelector(".leng i.fas.fa-times");
+        const checkBigLetter = document.querySelector(".big-letter i.fas.fa-check");
+        const crossBigLetter = document.querySelector(".big-letter i.fas.fa-times");
+        const checkNum = document.querySelector(".num i.fas.fa-check");
+        const crossNum = document.querySelector(".num i.fas.fa-times");
+
+
+        const lengRegex = /.{8,}/;
+        const bigLetterRegex = /[A-Z]/;
+        const numRegex = /[0-9]/;
+
+
+        passwordInput.addEventListener("focus", function () {
+            passwordAlert.classList.remove("d-none");
+        });
+
+        passwordInput.addEventListener("blur", function () {
+            passwordAlert.classList.add("d-none");
+        });
+
+        passwordInput.addEventListener("input", function () {
+            const password = passwordInput.value;
+            if (lengRegex.test(password)) {
+                checkLeng.classList.remove("d-none");
+                crossLeng.classList.add("d-none");
+            } else {
+                checkLeng.classList.add("d-none");
+                crossLeng.classList.remove("d-none");
+            }
+            if (bigLetterRegex.test(password)) {
+                checkBigLetter.classList.remove("d-none");
+                crossBigLetter.classList.add("d-none");
+            } else {
+                checkBigLetter.classList.add("d-none");
+                crossBigLetter.classList.remove("d-none");
+            }
+            if (numRegex.test(password)) {
+                checkNum.classList.remove("d-none");
+                crossNum.classList.add("d-none");
+            } else {
+                checkNum.classList.add("d-none");
+                crossNum.classList.remove("d-none");
+            }
+
+
+            const isValid = lengRegex.test(password) && bigLetterRegex.test(password) && numRegex.test(password);
+            if (isValid) {
+                passwordInput.classList.remove("is-invalid");
+                passwordInput.classList.add("is-valid");
+                passwordAlert.classList.remove("alert-warning");
+                passwordAlert.classList.add("alert-success");
+            } else {
+                passwordInput.classList.remove("is-valid");
+                passwordInput.classList.add("is-invalid");
+                passwordAlert.classList.remove("alert-success");
+                passwordAlert.classList.add("alert-warning");
+            }
+        });
+
+        // bootstrap validation
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+    </script>
+
+    <script>
+
+            (function () {
+                'use strict'
+
+
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+            })()
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
