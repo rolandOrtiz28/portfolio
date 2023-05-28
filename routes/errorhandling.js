@@ -2,14 +2,14 @@ const express = require('express')
 const router = express.Router();
 const User = require('../model/user')
 const bcrypt = require('bcrypt')
-
+const catchAsync = require('../utils/catchAsync');
 
 router.get('/register', (req, res) => {
     res.render('user/register')
 })
 
 
-router.post('/register', async (req, res) => {
+router.post('/register', catchAsync(async (req, res) => {
 
     const { username, email, password, number } = req.body;
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
@@ -46,7 +46,7 @@ router.post('/register', async (req, res) => {
     const redirectUrl = req.session.gobackTo || '/';
     delete req.session.gobackTo;
     res.redirect(redirectUrl);
-});
+}));
 
 router.get('/auth', (req, res) => {
     res.render('user/auth')
@@ -57,7 +57,7 @@ router.get('/login', (req, res) => {
 
 
 
-router.post('/login', async (req, res) => {
+router.post('/login', catchAsync(async (req, res) => {
     const { username, password } = req.body;
 
 
@@ -79,7 +79,7 @@ router.post('/login', async (req, res) => {
     req.flash('success', `Welcome Back ${user.username}`);
     res.redirect('/auth');
 
-});
+}));
 
 
 
