@@ -12,8 +12,9 @@ const methodOverride = require('method-override');
 const helmet = require('helmet')
 const MongoDBStore = require("connect-mongo");
 const mongoSanitize = require('express-mongo-sanitize');
-
-
+const passport = require('passport');
+const LocalStrategy = require('passport-local');
+const User = require('./model/user')
 // router
 const errorHandlingRoute = require('./routes/errorhandling')
 const productRoute = require('./routes/products')
@@ -123,6 +124,13 @@ app.use(
 );
 
 app.use(session(sessionConfig))
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 app.use(flash())
 
 app.use((req, res, next) => {

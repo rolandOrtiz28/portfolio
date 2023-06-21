@@ -76,9 +76,8 @@ gsap.fromTo(
         y: "100%",
         scrollTrigger: {
             trigger: "#about",
-            start: "top top", // Stick when the top of the section reaches the top of the viewport
-            end: "+=200", // Unstick after scrolling 200 pixels further
-            // pin: true,
+            start: "top top",
+            end: "+=200",
             pinSpacing: false
         }
     }

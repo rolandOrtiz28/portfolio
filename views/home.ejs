@@ -23,9 +23,8 @@
 </head>
 
 <body>
-    <%- include('./partials/flash') %>
         <section class="">
-
+<%- include('./partials/flash') %>
             <div class="container-fluid homepage">
                 <div class="row">
                     <div class="details w-50 col-6 ms-5">
@@ -119,7 +118,7 @@
 
         </section>
         <section class="portfolio" id="portfolio">
-
+<%- include('./partials/flash') %>
 
             <ul class="nav nav-pills ms-3 mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
@@ -138,7 +137,38 @@
                     <h2 class="gdh1">LATEST WEB DEVELOPMENT PROJECTS
                     </h2>
                     <div class="project-container">
-
+  <div class="project">
+                            <div class="project-box">
+                                <img src="images/3.png" alt="">
+                                <div class="project-layer">
+                                    <h4>Paula Med Pharma Cafe</h4>
+                                    <span class="project-text">
+                                        <p>Paula Med Pharma Cafe Website is an inviting online platform that serves
+                                            as
+                                            the
+                                            virtual hub for a charming coffee shop. With its seamless user
+                                            experience
+                                            and
+                                            range of features, the website offers a delightful way for coffee
+                                            enthusiasts to
+                                            engage with the brand.Upon visiting the website, users are greeted with
+                                            a
+                                            user
+                                            authentication system, allowing them to create personalized accounts.
+                                            The
+                                            heart
+                                            of the website lies in its comprehensive products menu, showcasing an
+                                            enticing
+                                            selection of freshly brewed coffee, specialty beverages, delectable
+                                            pastries,
+                                            and savory treats.</p>
+                                    </span>
+                                    <a href="#"><i class='bx bx-link-external'></i></a>
+                                </div>
+                            </div>
+                            <button class="btn3 mt-3"><a href="https://coffee-shop-g3e6.onrender.com">Live Demo</a></button>
+                            <button class="btn3 mt-3"><a href="https://github.com/rolandOrtiz28/CoffeeShop">Source Code</a></button>
+                        </div>
                         <div class="project">
                             <div class="project-box">
                                 <img src="images/1.png" alt="">
@@ -191,43 +221,11 @@
                             <button class="btn3 mt-3"><a href="https://github.com/rolandOrtiz28/PMSTweb">Source
                                     Code</a></button>
                         </div>
-                        <div class="project">
-                            <div class="project-box">
-                                <img src="images/3.png" alt="">
-                                <div class="project-layer">
-                                    <h4>SHADOWIES COFFEE SHOP</h4>
-                                    <span class="project-text">
-                                        <p>Shadowies Coffee Shop Website is an inviting online platform that serves
-                                            as
-                                            the
-                                            virtual hub for a charming coffee shop. With its seamless user
-                                            experience
-                                            and
-                                            range of features, the website offers a delightful way for coffee
-                                            enthusiasts to
-                                            engage with the brand.Upon visiting the website, users are greeted with
-                                            a
-                                            user
-                                            authentication system, allowing them to create personalized accounts.
-                                            The
-                                            heart
-                                            of the website lies in its comprehensive products menu, showcasing an
-                                            enticing
-                                            selection of freshly brewed coffee, specialty beverages, delectable
-                                            pastries,
-                                            and savory treats.</p>
-                                    </span>
-                                    <a href="#"><i class='bx bx-link-external'></i></a>
-                                </div>
-                            </div>
-                            <button class="btn3 mt-3"><a href="https://coffee-shop-g3e6.onrender.com">Live Demo</a></button>
-                            <button class="btn3 mt-3"><a href="https://github.com/rolandOrtiz28/CoffeeShop">Source Code</a></button>
-                        </div>
+
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
-                    id="know">
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 
                     <div class="skills-container">
                         <div class="wrapper">
@@ -374,43 +372,85 @@
 
                     </div>
                     <div class="modal-body">
-                        <form action="/register" method="POST" class="needs-validation" novalidate>
-                            <div class="mb-3">
-                                <label for="username" class="col-form-label">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="col-form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please choose an email.
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="col-form-label">Password</label>
-                                <input type="text" class="form-control" id="password" name="password" required>
-                                <div class="valid-feedback">
-                                    Looks good!
-                                </div>
-                                <div class="invalid-feedback">
-                                    Please choose a password.
-                                </div>
-                            </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn3" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" class="btn3 w-50">Register</button>
-                    </div>
-                    </form>
+                         <form action="/register" method="POST" class="needs-validation" novalidate>
+
+                                        <div class="form-outline mb-2">
+                                            <input type="text" name="username" id="form3Example1cg"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="form3Example1cg">Your Username</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Username.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <input type="email" name="email" id="form3Example3cg"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="form3Example3cg">Your Email</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Email.
+                                            </div>
+                                        </div>
+                                        <div class="form-outline mb-2">
+                                            <input type="text" name="number" id="form3Example4cdg"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="form3Example4cdg">Your Phone Numer</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Phone Number.
+                                            </div>
+                                        </div>
+
+                                        <div class="form-outline mb-2">
+                                            <input type="password" name="password" id="password"
+                                                class="form-control form-control-md" required />
+                                            <label class="form-label" for="password">Password</label>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please choose a Password.
+                                            </div>
+                                            <div class="validicon w-100">
+                                                <div class="">
+                                                    <div class="alert px-2 py-2 mb-0 d-none" role="alert"
+                                                        data-mdb-color="warning" id="password-alert">
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li class="requirements leng">
+                                                                <i class="fas fa-check text-success me-2 check-leng"
+                                                                    style="display:none"></i>
+                                                                <i class="fas fa-times text-danger me-3 cross-leng"></i>
+                                                                Your password must have at least 8 chars
+                                                            </li>
+                                                            <li class="requirements big-letter">
+                                                                <i class="fas fa-check text-success me-2 check-big-letter"
+                                                                    style="display:none"></i>
+                                                                <i
+                                                                    class="fas fa-times text-danger me-3 cross-big-letter"></i>
+                                                                Your password must have at least 1 big letter.
+                                                            </li>
+                                                            <li class="requirements num">
+                                                                <i class="fas fa-check text-success me-2 check-num"
+                                                                    style="display:none"></i>
+                                                                <i class="fas fa-times text-danger me-3 cross-num"></i>
+                                                                Your password must have at least 1 number.
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-dark ">Register</button>
+                                    </form>
                 </div>
             </div>
         </div>
